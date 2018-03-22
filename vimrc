@@ -56,17 +56,17 @@ set scroll=4                                                    " Number of line
 set scrolloff=15                                                " Keep cursor away from this many chars top/bot
 set sessionoptions-=options                                     " Don't save runtimepath in Vim session (see tpope/vim-pathogen docs)
 set shiftround                                                  " Shift to certain columns, not just n spaces
-set shiftwidth=2                                                " Number of spaces to shift for autoindent or >,<
+set shiftwidth=4                                                " Number of spaces to shift for autoindent or >,<
 set shortmess+=A                                                " Don't bother me when a swapfile exists
 set showbreak=                                                  " Show for lines that have been wrapped, like Emacs
 set showmatch                                                   "showmatch Hilight matching braces/parens/etc.
 set sidescrolloff=3                                             " Keep cursor away from this many chars left/right
 set smartcase                                                   " Lets you search for ALL CAPS
-set softtabstop=2                                               " Spaces 'feel' like tabs
+set softtabstop=4                                               " Spaces 'feel' like tabs
 set suffixes+=.pyc                                              " Ignore these files when tab-completing
-set tabstop=2                                                   " The One True Tab
+set tabstop=4                                                   " The One True Tab
 set textwidth=100                                               " 100 is the new 80
-set notitle                                                   " Don't set the title of the Vim window
+set notitle                                                     " Don't set the title of the Vim window
 set wildmenu                                                    " Show possible completions on command line
 set wildmode=list:longest,full                                  " List all options and complete
 set wildignore=*.class,*.o,*~,*.pyc,.git,node_modules           " Ignore certain files in tab-completion
@@ -107,8 +107,8 @@ let g:gitgutter_sign_removed = '∙'
 let g:gitgutter_sign_modified_removed = '∙'
 
 " SuperTab
-let g:SuperTabLongestEnhanced=1
-let g:SuperTabLongestHighlight=1
+"let g:SuperTabLongestEnhanced=1
+"let g:SuperTabLongestHighlight=1
 
 " Use incsearch.vim to highlight as I search
 map /  <Plug>(incsearch-forward)
@@ -178,15 +178,17 @@ endfunction
 let g:goyo_width = 120
 
 function! s:goyo_enter()
-    set scrolloff=1000
-    "set cursorline
-    Limelight
+  set guifont=Hack:h20
+  set scrolloff=1000
+  "set cursorline
+  Limelight
 endfunction
 
 function! s:goyo_leave()
-    Limelight!
-    set scrolloff=15
-    "set cursorline!
+  set guifont=Hack:h17
+  Limelight!
+  set scrolloff=15
+  "set cursorline!
 endfunction
 
 autocmd! User GoyoEnter call <SID>goyo_enter()
@@ -204,8 +206,7 @@ let g:grammarous#show_first_error=1
 let g:grammarous#default_lang='de'
 
 " Pandoc
-let g:pandoc#biblio#bibs = ['/Users/fabianmundt/Library/Mobile Documents/com~apple~CloudDocs/Papers/Bibliography.bib']
-" Add dracula syntax highlighting
+"let g:pandoc#biblio#bibs = ['/Users/fabianmundt/Library/Mobile Documents/com~apple~CloudDocs/Papers/Bibliography.bib']
 
 " ----------------------------------------------------------------------------
 " COLORS
@@ -266,7 +267,7 @@ nmap <Esc>K   mo:Ggrep! "\b<cword>\b" <CR>
 " ----------------------------------------------------------------------------
 
 au BufNewFile,BufRead *.md      setlocal ft=pandoc nolist spell
-au BufNewFile,BufRead *.md,*.markdown setlocal foldlevel=999 tw=0 nocin
+au BufNewFile,BufRead *.md,*.markdown,*.Rmd setlocal foldlevel=999 tw=0 nocin
 
 au FileType markdown syn sync fromstart
 
@@ -279,4 +280,18 @@ au FileType markdown syn sync fromstart
 "   autocmd!
 "   autocmd BufWritePost .vimrc source %
 "augroup END
+
+" Hotfix for the current MacVim Python 3 bug
+if has('gui_running')
+    if has('python3')
+        command! -nargs=1 Py py3 <args>
+        set pythonthreedll=/usr/local/Frameworks/Python.framework/Versions/3.6/Python
+        set pythonthreehome=/usr/local/Frameworks/Python.framework/Versions/3.6
+    else
+        command! -nargs=1 Py py <args>
+        set pythondll=/usr/local/Frameworks/Python.framework/Versions/2.7/Python
+        set pythonhome=/usr/local/Frameworks/Python.framework/Versions/2.7
+    endif
+else
+endif
 

@@ -206,7 +206,8 @@ let g:grammarous#show_first_error=1
 let g:grammarous#default_lang='de'
 
 " Pandoc
-"let g:pandoc#biblio#bibs = ['/Users/fabianmundt/Library/Mobile Documents/com~apple~CloudDocs/Papers/Bibliography.bib']
+let g:pandoc#syntax#conceal#use = 0
+let g:pandoc#biblio#bibs = ['/Users/fabianmundt/Library/Mobile Documents/com~apple~CloudDocs/Papers/Bibliography.bib']
 
 " ----------------------------------------------------------------------------
 " COLORS
@@ -234,7 +235,7 @@ hi pandocEmphasis gui=italic cterm=italic guifg=#f1fa8c ctermfg=226
 hi pandocStrong gui=bold cterm=bold guifg=#ffb86c ctermfg=208
 hi pandocStrongEmphasis gui=bold,italic cterm=bold,italic guifg=#f1fa8c ctermfg=226
 hi pandocEmphasisInStrong gui=bold,italic cterm=bold,italic guifg=#ffb86c ctermfg=208
-hi Conceal cterm=NONE ctermbg=NONE ctermfg=212 guibg=NONE guifg=#ff79c6
+"hi Conceal cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 
 " ----------------------------------------------------------------------------
 " KEY MAPS

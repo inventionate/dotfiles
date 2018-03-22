@@ -234,6 +234,7 @@ hi pandocEmphasis gui=italic cterm=italic guifg=#f1fa8c ctermfg=226
 hi pandocStrong gui=bold cterm=bold guifg=#ffb86c ctermfg=208
 hi pandocStrongEmphasis gui=bold,italic cterm=bold,italic guifg=#f1fa8c ctermfg=226
 hi pandocEmphasisInStrong gui=bold,italic cterm=bold,italic guifg=#ffb86c ctermfg=208
+hi Conceal cterm=NONE ctermbg=NONE ctermfg=212 guibg=NONE guifg=#ff79c6
 
 " ----------------------------------------------------------------------------
 " KEY MAPS

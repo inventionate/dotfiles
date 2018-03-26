@@ -264,6 +264,15 @@ nmap ˚        mo:Ack! "\b<cword>\b" <CR>
 nmap <M-S-k>  mo:Ggrep! "\b<cword>\b" <CR>
 nmap <Esc>K   mo:Ggrep! "\b<cword>\b" <CR>
 
+" Turn off linewise keys. Normally, the `j' and `k' keys move the cursor down one entire line. with
+" line wrapping on, this can cause the cursor to actually skip a few lines on the screen because
+" it's moving from line N to line N+1 in the file. I want this to act more visually -- I want `down'
+" to mean the next line on the screen
+nmap j gj
+nmap k gk
+
+nmap <Leader>p :Goyo<CR>
+
 " ----------------------------------------------------------------------------
 " FILE TYPE TRIGGERS
 " ----------------------------------------------------------------------------
@@ -272,6 +281,12 @@ au BufNewFile,BufRead *.md      setlocal ft=pandoc nolist spell
 au BufNewFile,BufRead *.md,*.markdown,*.Rmd setlocal foldlevel=999 tw=0 nocin
 
 au FileType markdown syn sync fromstart
+
+" ----------------------------------------------------------------------------
+" PROJECT SETTINGS
+" ----------------------------------------------------------------------------
+
+so ~/.vim/projects.vim
 
 " ----------------------------------------------------------------------------
 " AUTO COMMANDS
@@ -284,16 +299,16 @@ au FileType markdown syn sync fromstart
 "augroup END
 
 " Hotfix for the current MacVim Python 3 bug
-if has('gui_running')
-    if has('python3')
-        command! -nargs=1 Py py3 <args>
-        set pythonthreedll=/usr/local/Frameworks/Python.framework/Versions/3.6/Python
-        set pythonthreehome=/usr/local/Frameworks/Python.framework/Versions/3.6
-    else
-        command! -nargs=1 Py py <args>
-        set pythondll=/usr/local/Frameworks/Python.framework/Versions/2.7/Python
-        set pythonhome=/usr/local/Frameworks/Python.framework/Versions/2.7
-    endif
-else
-endif
+"if has('gui_running')
+"    if has('python3')
+"        command! -nargs=1 Py py3 <args>
+"        set pythonthreedll=/usr/local/Frameworks/Python.framework/Versions/3.6/Python
+"        set pythonthreehome=/usr/local/Frameworks/Python.framework/Versions/3.6
+"    else
+"        command! -nargs=1 Py py <args>
+"        set pythondll=/usr/local/Frameworks/Python.framework/Versions/2.7/Python
+"        set pythonhome=/usr/local/Frameworks/Python.framework/Versions/2.7
+"    endif
+"else
+"endif
 

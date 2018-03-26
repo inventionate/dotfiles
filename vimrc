@@ -131,7 +131,7 @@ let g:lightline = {
 \ 'colorscheme': 'wombat',
 \ 'active': {
 \   'left': [['mode', 'paste'], ['filename', 'modified', 'filetype']],
-\   'right': [['lineinfo'], ['percent'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok']]
+\   'right': [['wordcount'], ['lineinfo'], ['percent'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok']]
 \ },
 \ 'component_expand': {
 \   'linter_warnings': 'LightlineLinterWarnings',
@@ -142,6 +142,9 @@ let g:lightline = {
 \   'readonly': 'error',
 \   'linter_warnings': 'warning',
 \   'linter_errors': 'error'
+\ },
+\ 'component_function': {
+\   'wordcount': 'wordCount#WordCount',
 \ },
 \ }
 
@@ -180,14 +183,16 @@ let g:goyo_width = 120
 function! s:goyo_enter()
   set guifont=Hack:h20
   set scrolloff=1000
+  let g:auto_save = 1
   "set cursorline
   Limelight
 endfunction
 
 function! s:goyo_leave()
   set guifont=Hack:h17
-  Limelight!
   set scrolloff=15
+  let g:auto_save = 0
+  Limelight!
   "set cursorline!
 endfunction
 

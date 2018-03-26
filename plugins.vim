@@ -28,7 +28,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'Raimondi/delimitMate'
 Plug 'kshenoy/vim-signature'
-"Plug '907th/vim-auto-save'
+Plug '907th/vim-auto-save'
 Plug 'tomtom/tlib_vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
@@ -42,6 +42,7 @@ Plug 'vim-latex/vim-latex'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-eunuch'
+Plug 'ChesleyTan/wordCount.vim'
 
 " Initialize plugin system
 call plug#end()

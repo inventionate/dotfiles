@@ -43,6 +43,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-eunuch'
 Plug 'ChesleyTan/wordCount.vim'
+Plug 'xolox/vim-session'
+Plug 'xolox/vim-misc'
 
 " Initialize plugin system
 call plug#end()

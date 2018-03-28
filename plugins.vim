@@ -34,11 +34,9 @@ Plug 'vim-latex/vim-latex'
 Plug 'Raimondi/delimitMate'
 Plug 'kshenoy/vim-signature'
 Plug '907th/vim-auto-save'
-Plug 'tomtom/tlib_vim'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'garbas/vim-snipmate'
 Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 Plug 'jalvesaq/Nvim-R'
 Plug 'chrisbra/NrrwRgn'
 Plug 'airblade/vim-gitgutter'
@@ -48,6 +46,8 @@ Plug 'xolox/vim-misc'
 
 " Initialize plugin system
 call plug#end()
+
+
 
 
 

@@ -211,6 +211,8 @@ let g:grammarous#show_first_error=1
 let g:grammarous#default_lang='de'
 
 " Pandoc
+let g:pandoc#folding#level = 999
+let g:pandoc#after#modules#enabled = ['snipmate', 'supertab', 'nrrwrgn', 'tablemode']
 let g:pandoc#syntax#conceal#use = 0
 let g:pandoc#biblio#bibs = ['/Users/fabianmundt/Library/Mobile Documents/com~apple~CloudDocs/Papers/Bibliography.bib']
 
@@ -277,15 +279,6 @@ nmap j gj
 nmap k gk
 
 nmap <Leader>p :Goyo<CR>
-
-" ----------------------------------------------------------------------------
-" FILE TYPE TRIGGERS
-" ----------------------------------------------------------------------------
-
-au BufNewFile,BufRead *.md      setlocal ft=pandoc nolist spell
-au BufNewFile,BufRead *.md,*.markdown,*.Rmd setlocal foldlevel=999 tw=0 nocin
-
-au FileType markdown syn sync fromstart
 
 " ----------------------------------------------------------------------------
 " PROJECT SETTINGS

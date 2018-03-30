@@ -280,6 +280,11 @@ nmap k gk
 
 nmap <Leader>p :Goyo<CR>
 
+"RMardkown shortcuts
+nmap <Leader>rmd :RMarkdown pdf latex_engine="lualatex", citation_package="biblatex", template="template_part.latex", pandoc_args="--listings"<CR>
+
+nmap <Leader>opdf :execute '!open "' . expand('%:p:h') . '/' . expand('%:r') . '.pdf"'<CR>
+
 " ----------------------------------------------------------------------------
 " PROJECT SETTINGS
 " ----------------------------------------------------------------------------

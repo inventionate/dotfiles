@@ -215,6 +215,7 @@ let g:pandoc#folding#level = 999
 let g:pandoc#after#modules#enabled = ['snipmate', 'supertab', 'nrrwrgn', 'tablemode']
 let g:pandoc#syntax#conceal#use = 0
 let g:pandoc#biblio#bibs = ['/Users/fabianmundt/Library/Mobile Documents/com~apple~CloudDocs/Papers/Bibliography.bib']
+let g:pandoc#spell#default_langs = ['de_de', 'en_gb', 'fr_fr']
 
 " ----------------------------------------------------------------------------
 " COLORS
@@ -235,7 +236,7 @@ highlight def link NERDTreeRO NERDTreeFile
 "We'll fake a custom left padding for each window.
 hi LineNr guibg=bg
 set foldcolumn=1
-hi foldcolumn guibg=bg
+hi FoldColumn ctermfg=246 ctermbg=235 cterm=NONE guifg=#909194 guibg=bg gui=NONE
 
 " Add dracula syntax highlighting
 hi pandocEmphasis gui=italic cterm=italic guifg=#f1fa8c ctermfg=226

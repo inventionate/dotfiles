@@ -214,8 +214,21 @@ let g:grammarous#default_lang='de'
 let g:pandoc#folding#level = 999
 let g:pandoc#after#modules#enabled = ['snipmate', 'supertab', 'nrrwrgn', 'tablemode']
 let g:pandoc#syntax#conceal#use = 0
+let g:pandoc#folding#fdc = 2
 let g:pandoc#biblio#bibs = ['/Users/fabianmundt/Library/Mobile Documents/com~apple~CloudDocs/Papers/Bibliography.bib']
-let g:pandoc#spell#default_langs = ['de_de', 'en_gb', 'fr_fr']
+let g:pandoc#spell#default_langs = ['de_de', 'en_gb']
+
+" Startify
+let g:startify_bookmarks = [ {'d': '~/Library/Mobile Documents/com~apple~CloudDocs/Dissertation/Manuskript'} ]
+let g:startify_files_number = 5
+let g:startify_custom_header = [
+            \ '            __                 ',
+            \ '    __  __ /\_\    ___ ___     ',
+            \ '   /\ \/\ \\/\ \ /'' __` __`\  ',
+            \ '   \ \ \_/ |\ \ \/\ \/\ \/\ \  ',
+            \ '    \ \___/  \ \_\ \_\ \_\ \_\ ',
+            \ '     \/__/    \/_/\/_/\/_/\/_/ ',
+            \ ]
 
 " ----------------------------------------------------------------------------
 " COLORS
@@ -235,8 +248,8 @@ highlight def link NERDTreeRO NERDTreeFile
 
 "We'll fake a custom left padding for each window.
 hi LineNr guibg=bg
-set foldcolumn=1
-hi FoldColumn ctermfg=246 ctermbg=235 cterm=NONE guifg=#909194 guibg=bg gui=NONE
+set foldcolumn=2
+" hi FoldColumn ctermfg=246 ctermbg=235 cterm=NONE guifg=#909194 guibg=bg gui=NONE
 
 " Add dracula syntax highlighting
 hi pandocEmphasis gui=italic cterm=italic guifg=#f1fa8c ctermfg=226
@@ -285,12 +298,6 @@ nmap <Leader>p :Goyo<CR>
 nmap <Leader>rmd :RMarkdown pdf latex_engine="lualatex", citation_package="biblatex", template="template_part.latex", pandoc_args="--listings"<CR>
 
 nmap <Leader>opdf :execute '!open "' . expand('%:p:h') . '/' . expand('%:r') . '.pdf"'<CR>
-
-" ----------------------------------------------------------------------------
-" PROJECT SETTINGS
-" ----------------------------------------------------------------------------
-
-so ~/.vim/projects.vim
 
 " ----------------------------------------------------------------------------
 " AUTO COMMANDS

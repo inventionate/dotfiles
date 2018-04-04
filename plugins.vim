@@ -13,7 +13,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'mileszs/ack.vim'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-pandoc-after'
@@ -41,8 +41,7 @@ Plug 'jalvesaq/Nvim-R'
 Plug 'chrisbra/NrrwRgn'
 Plug 'airblade/vim-gitgutter'
 Plug 'ChesleyTan/wordCount.vim'
-Plug 'xolox/vim-session'
-Plug 'xolox/vim-misc'
+Plug 'mhinz/vim-startify'
 
 " Initialize plugin system
 call plug#end()

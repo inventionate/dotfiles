@@ -184,8 +184,8 @@ endfunction
 let g:goyo_width = 120
 
 function! s:goyo_enter()
-  set guifont=Hack:h20
-  set scrolloff=1000
+  set guifont=Hack:h22
+  set scrolloff=999
   let g:auto_save = 1
   "set cursorline
   Limelight
@@ -195,8 +195,8 @@ function! s:goyo_leave()
   set guifont=Hack:h17
   set scrolloff=15
   let g:auto_save = 0
-  Limelight!
   "set cursorline!
+  Limelight!
 endfunction
 
 autocmd! User GoyoEnter call <SID>goyo_enter()

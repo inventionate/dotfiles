@@ -74,7 +74,9 @@ set macligatures                                                " We want pretty
 set linespace=16                                                " Macvim-specific line-height.
 set splitbelow                                                  " Make splits defaut to below...
 set splitright                                                  " And to the right.
-set complete+=s
+set complete+=s                                                 " Enable insert mode completion.
+"set undodir=~/.vim/undo                                         " Undo file dir
+"set undofile                                                    " Enable persistent undo.
 
 " Essential for filetype plugins.
 filetype plugin indent on

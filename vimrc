@@ -78,6 +78,7 @@ set complete+=s                                                 " Enable insert 
 "set undodir=~/.vim/undo                                         " Undo file dir
 "set undofile                                                    " Enable persistent undo.
 
+
 " Essential for filetype plugins.
 filetype plugin indent on
 
@@ -230,6 +231,12 @@ let g:startify_custom_header = [
             \ '   \ \ \_/ |\ \ \/\ \/\ \/\ \  ',
             \ '    \ \___/  \ \_\ \_\ \_\ \_\ ',
             \ '     \/__/    \/_/\/_/\/_/\/_/ ',
+            \ ]
+let g:startify_lists = [
+            \ { 'type': 'files',     'header': [   'MRU']            },
+            \ { 'type': 'sessions',  'header': [   'Sessions']       },
+            \ { 'type': 'bookmarks', 'header': [   'Bookmarks']      },
+            \ { 'type': 'commands',  'header': [   'Commands']       },
             \ ]
 
 " ----------------------------------------------------------------------------

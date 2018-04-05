@@ -184,19 +184,25 @@ endfunction
 let g:goyo_width = 120
 
 function! s:goyo_enter()
-  set guifont=Hack:h22
-  set scrolloff=999
-  let g:auto_save = 1
-  "set cursorline
-  Limelight
+    set guifont=Hack:h22
+    set scrolloff=999
+    let g:auto_save = 1
+    "set cursorline
+    Limelight
 endfunction
 
 function! s:goyo_leave()
-  set guifont=Hack:h17
-  set scrolloff=15
-  let g:auto_save = 0
-  "set cursorline!
-  Limelight!
+    set guifont=Hack:h17
+    set scrolloff=15
+    let g:auto_save = 0
+    "set cursorline!
+    Limelight!
+
+    syntax on
+    hi pandocEmphasis gui=italic cterm=italic guifg=#f1fa8c ctermfg=226
+    hi pandocStrong gui=bold cterm=bold guifg=#ffb86c ctermfg=208
+    hi pandocStrongEmphasis gui=bold,italic cterm=bold,italic guifg=#f1fa8c ctermfg=226
+    hi pandocEmphasisInStrong gui=bold,italic cterm=bold,italic guifg=#ffb86c ctermfg=208
 endfunction
 
 autocmd! User GoyoEnter call <SID>goyo_enter()
@@ -222,7 +228,13 @@ let g:pandoc#biblio#bibs = ['/Users/fabianmundt/Library/Mobile Documents/com~app
 let g:pandoc#spell#default_langs = ['de_de', 'en_gb']
 
 " Startify
-let g:startify_bookmarks = [ {'d': '~/Library/Mobile Documents/com~apple~CloudDocs/Dissertation/Manuskript'} ]
+let g:startify_bookmarks = [ 
+            \ {'d': '~/Library/Mobile Documents/com~apple~CloudDocs/Dissertation/Manuskript'},
+            \ {'a': '~/Library/Mobile Documents/com~apple~CloudDocs/Documents/Artikel'},
+            \ {'i': '~/Repositories/inventionate-website'},
+            \ {'l': '~/Repositories/lemas-webapp'},
+            \ {'t': '~/Repositories/TimeSpaceAnalysis'}
+            \]
 let g:startify_files_number = 5
 let g:startify_custom_header = [
             \ '            __                 ',

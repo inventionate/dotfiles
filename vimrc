@@ -90,12 +90,12 @@ so ~/.vim/plugins.vim
 
 " For any plugins that use this, make their keymappings use comma
 let mapleader = ","
-let maplocalleader = ","
+let maplocalleader = ";"
 
 " FZF (replaces Ctrl-P, FuzzyFinder and Command-T)
 set rtp+=/usr/local/opt/fzf
 set rtp+=~/.fzf
-nmap ; :Buffers<CR>
+nmap <Leader>; :Buffers<CR>
 nmap <Leader>r :Tags<CR>
 nmap <D-e> :Files<CR>
 nmap <Leader>a :Ag<CR>
@@ -226,6 +226,10 @@ let g:pandoc#syntax#conceal#use = 0
 let g:pandoc#folding#fdc = 2
 let g:pandoc#biblio#bibs = ['/Users/fabianmundt/Library/Mobile Documents/com~apple~CloudDocs/Papers/Bibliography.bib']
 let g:pandoc#spell#default_langs = ['de_de', 'en_gb']
+
+"Nvim R
+"let R_in_buffer = 0                         "Disable build in Terminal
+"let R_applescript = 1                       "Use Mac R.app
 
 " Startify
 let g:startify_bookmarks = [ 

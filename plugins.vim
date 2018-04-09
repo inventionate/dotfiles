@@ -42,12 +42,8 @@ Plug 'chrisbra/NrrwRgn'
 Plug 'airblade/vim-gitgutter'
 Plug 'ChesleyTan/wordCount.vim'
 Plug 'mhinz/vim-startify'
+Plug 'chrisbra/csv.vim'
 
 " Initialize plugin system
 call plug#end()
-
-
-
-
-
 

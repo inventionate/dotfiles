@@ -43,7 +43,11 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ChesleyTan/wordCount.vim'
 Plug 'mhinz/vim-startify'
 Plug 'chrisbra/csv.vim'
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
 
 " Initialize plugin system
 call plug#end()
+
 

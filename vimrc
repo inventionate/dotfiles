@@ -78,7 +78,6 @@ set complete+=s                                                 " Enable insert 
 "set undodir=~/.vim/undo                                         " Undo file dir
 "set undofile                                                    " Enable persistent undo.
 
-
 " Essential for filetype plugins.
 filetype plugin indent on
 
@@ -219,9 +218,12 @@ let g:tq_language=['de', 'en']
 let g:grammarous#show_first_error=1
 let g:grammarous#default_lang='de'
 
+" Deoplete
+let g:deoplete#enable_at_startup = 1
+
 " Pandoc
 let g:pandoc#folding#level = 999
-let g:pandoc#after#modules#enabled = ['snipmate', 'supertab', 'nrrwrgn', 'tablemode']
+let g:pandoc#after#modules#enabled = ['snipmate', 'supertab', 'nrrwrgn', 'tablemode', 'deoplete']
 let g:pandoc#syntax#conceal#use = 0
 let g:pandoc#folding#fdc = 2
 let g:pandoc#biblio#bibs = ['/Users/fabianmundt/Library/Mobile Documents/com~apple~CloudDocs/Papers/Bibliography.bib']

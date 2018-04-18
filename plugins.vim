@@ -42,12 +42,29 @@ Plug 'chrisbra/NrrwRgn'
 Plug 'airblade/vim-gitgutter'
 Plug 'ChesleyTan/wordCount.vim'
 Plug 'mhinz/vim-startify'
-Plug 'chrisbra/csv.vim'
+Plug 'ktonga/vim-follow-my-lead'
+Plug 'chrisbra/csv.vim', { 'for': 'csv' }
 Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
+Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
+Plug 'wdalmut/vim-phpunit', { 'for': 'php' }
+Plug 'StanAngeloff/php.vim', { 'for': 'php' }
+Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
+Plug 'tobyS/vmustache', { 'for': 'php' }
+Plug 'tobyS/pdv', { 'for': 'php' }
+Plug 'elzr/vim-json'
+Plug 'pangloss/vim-javascript', { 'for': 'javascript'}
+Plug 'posva/vim-vue'
+Plug 'mattn/emmet-vim', { 'for': 'html' }
+Plug 'othree/html5.vim', { 'for': 'html' }
+Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'sass', 'scss', 'html'] }
+Plug 'tpope/vim-haml', { 'for': ['css', 'scss', 'sass', 'html'] }
 
 " Initialize plugin system
 call plug#end()
+
+
 
 

@@ -188,6 +188,7 @@ function! s:goyo_enter()
     let g:auto_save = 1
     "set cursorline
     Limelight
+    call deoplete#disable()
 endfunction
 
 function! s:goyo_leave()
@@ -196,7 +197,7 @@ function! s:goyo_leave()
     let g:auto_save = 0
     "set cursorline!
     Limelight!
-
+    call deoplete#enable()
     syntax on
     hi pandocEmphasis gui=italic cterm=italic guifg=#f1fa8c ctermfg=226
     hi pandocStrong gui=bold cterm=bold guifg=#ffb86c ctermfg=208
@@ -220,6 +221,8 @@ let g:grammarous#default_lang='de'
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
+let g:deoplete#ignore_sources.php = ['omni']
 
 " Pandoc
 let g:pandoc#folding#level = 999
@@ -349,4 +352,6 @@ nmap <Leader>opdf :execute '!open "' . expand('%:p:h') . '/' . expand('%:r') . '
 "    endif
 "else
 "endif
+
+
 

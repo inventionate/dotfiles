@@ -44,7 +44,7 @@ Plug 'ChesleyTan/wordCount.vim'
 Plug 'mhinz/vim-startify'
 Plug 'ktonga/vim-follow-my-lead'
 Plug 'chrisbra/csv.vim', { 'for': 'csv' }
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim', { 'for': ['php', 'javascript', 'html', 'css', 'scss', 'sass', 'vue', 'json'] }
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
@@ -64,7 +64,4 @@ Plug 'tpope/vim-haml', { 'for': ['css', 'scss', 'sass', 'html'] }
 
 " Initialize plugin system
 call plug#end()
-
-
-
 

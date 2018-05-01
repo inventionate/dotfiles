@@ -61,6 +61,7 @@ Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'othree/html5.vim', { 'for': 'html' }
 Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'sass', 'scss', 'html'] }
 Plug 'tpope/vim-haml', { 'for': ['css', 'scss', 'sass', 'html'] }
+Plug 'jwalton512/vim-blade', { 'for': 'php' }
 
 " Initialize plugin system
 call plug#end()

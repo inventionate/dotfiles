@@ -243,14 +243,14 @@ let g:startify_bookmarks = [
             \ {'t': '~/Repositories/TimeSpaceAnalysis'}
             \]
 let g:startify_files_number = 5
-let g:startify_custom_header = [
-            \ '            __                 ',
-            \ '    __  __ /\_\    ___ ___     ',
-            \ '   /\ \/\ \\/\ \ /'' __` __`\  ',
-            \ '   \ \ \_/ |\ \ \/\ \/\ \/\ \  ',
-            \ '    \ \___/  \ \_\ \_\ \_\ \_\ ',
-            \ '     \/__/    \/_/\/_/\/_/\/_/ ',
-            \ ]
+let g:startify_custom_header = []
+"            \ '            __                 ',
+"            \ '    __  __ /\_\    ___ ___     ',
+"            \ '   /\ \/\ \\/\ \ /'' __` __`\  ',
+"            \ '   \ \ \_/ |\ \ \/\ \/\ \/\ \  ',
+"            \ '    \ \___/  \ \_\ \_\ \_\ \_\ ',
+"            \ '     \/__/    \/_/\/_/\/_/\/_/ ',
+"            \ ]
 let g:startify_lists = [
             \ { 'type': 'files',     'header': [   'MRU']            },
             \ { 'type': 'sessions',  'header': [   'Sessions']       },
